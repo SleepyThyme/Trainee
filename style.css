@@ -27,6 +27,19 @@ body {
   }
 }
 
+@keyframes fadeHtmlBackground {
+  from {
+    background-color: #000000;
+  }
+  to {
+    background-color: #ffffff;
+  }
+}
+
+html.fade-out {
+  animation: fadeHtmlBackground 2s forwards;
+}
+
 html {
   background-color: #000000;
 }
