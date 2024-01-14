@@ -28,3 +28,4 @@ function stopStars() {
 }
 
 document.body.addEventListener('click', stopStars);
+document.documentElement.addEventListener('click', stopStars);
