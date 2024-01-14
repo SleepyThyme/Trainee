@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Hi </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <script>
+    // Function to create stars and append them to the body
+    function createStars() {
+      const numberOfStars = 100; // Adjust the number of stars as needed
+
+      for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+
+        // Set random position for the star
+        const xCoord = Math.random() * window.innerWidth;
+        const yCoord = Math.random() * window.innerHeight;
+        const delay = Math.random();
+        while (delay > 5) {
+          delay -= 5;
+        }
+        star.style.left = `${xCoord}px`;
+        star.style.top = `${yCoord}px`;
+        star.style.animationDelay = `-${delay}s`;
+
+        document.body.appendChild(star);
+      }
+    }
+
+    function stopStars() {
+      window.onload = null;
+    }
+
+
+    // Call the function to create stars when the page loads
+    window.onload = createStars;
+    setTimeout(stopStars, 8000);
+  </script>
+
+
+  <div>
+    <a class="navTitle">Home</a>
+    <a class="navTitle"> About</a>
+    <a class="navTitle">filler</a>
+    <a class="navTitle">filler</a>
+  </div>
+  <div>
+    <a class ="a">|||||</a>
+    <a class ="b">|||||</a>
+    <a class ="c">|||||</a>
+    <a class ="d">|||||</a>
+    <a class ="e">|||||</a>
+    <a class ="f">|||||</a>
+  </div>
+  
+</body>
+
+</html>

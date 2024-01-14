@@ -1,0 +1,63 @@
+.navTitle {
+  color:rgb(60, 90, 155);
+  background-color:#EEF0F2;
+}
+
+body {
+  background-color: #EEF0F2;
+}
+
+html {
+  background-color: #000000;
+}
+
+.a {
+  font-size: 50px;
+  color:#D9A78B;
+}
+
+.b {
+  font-size: 50px;
+  color:#6575A6;
+}
+
+.c {
+  font-size: 50px;
+  color:#6387F2;
+}
+
+.d {
+  font-size: 50px;
+  color:#4BA4F2;
+}
+
+.e {
+  font-size: 50px;
+  color:#6BD9F2;
+}
+
+.f {
+  font-size: 50px;
+  color:#EEF0F2;
+}
+
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  animation: twinkling 2s infinite;
+}
+
+@keyframes twinkling {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
