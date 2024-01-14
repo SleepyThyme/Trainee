@@ -3,42 +3,14 @@
 
 <head>
 <title> Jian's Trainee Website </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <script>
-
-    function createStars() {
-      const numberOfStars = 100;
-
-      for (let i = 0; i < numberOfStars; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-
-        const posX = Math.random() * window.innerWidth;
-        const posY = Math.random() * window.innerHeight;
-        const delay = Math.random() * 6;
-        star.style.left = `${posX}px`;
-        star.style.top = `${posY}px`;
-        star.style.animationDelay = `-${delay}s`;
-
-        document.body.appendChild(star);
-      }
-    }
-
-    function stopStars() {
-      const stars = document.querySelectorAll('.star');
-      for (let i = 0; i < stars.length; i++) {
-        stars[i].style.animation = 'none';
-      }
-      document.documentElement.classList.add('fade-out');
-    }
-
-    window.onload = createStars;
-    document.body.addEventListener('click', stopStars);
-  </script>
 
   <div>
     <a class="navTitle">Home</a>

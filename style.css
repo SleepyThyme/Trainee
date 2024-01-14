@@ -42,6 +42,7 @@ html.fade-out {
 
 html {
   background-color: #000000;
+  transition: background-color 0.5s ease;
 }
 
 .a {
