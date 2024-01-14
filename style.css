@@ -55,20 +55,17 @@ footer.fade-in {
 }
 
 .navBar {
-  z-index: 1;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
   position: sticky;
   top: 0px;
-  border-style: solid;
-  border-color: #6575A6;
-  border-width: 10px;
-  border-top: none;
+  padding: 20px;
   background-color: #6575A6;
 }
 
 .navTitle {
-  color:rgb(60, 90, 155);
-  background-color:#b8b8b8;
+  color:#6BD9F2;
 }
 
 .a {
