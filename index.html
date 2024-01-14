@@ -2,14 +2,32 @@
 <html>
 
 <head>
-<title> Hi </title>
+<title> Jian's Trainee Website </title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <script>
-    
+    function createStars() {
+      const numberOfStars = 150; // Adjust the number of stars as needed
+
+      for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+
+        // Set random position for the star
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const delay = Math.floor(Math.random() * 6);
+        star.style.left = `${posX}px`;
+        star.style.top = `${posY}px`;
+        star.style.animationDelay = `=${delay}s`;
+
+        document.body.appendChild(star);
+      }
+    }
+    window.onload = createStars;
   </script>
 
   <div>
