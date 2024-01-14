@@ -27,5 +27,4 @@ function stopStars() {
   stars.forEach(star => star.remove());
 }
 
-document.body.addEventListener('click', stopStars);
-document.documentElement.addEventListener('click', stopStars);
+document.addEventListener('click', stopStars);
