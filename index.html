@@ -9,14 +9,15 @@
 <body>
 
   <script>
+    let clicked = true;
+
     function createStars() {
-      const numberOfStars = 100; // Adjust the number of stars as needed
+      const numberOfStars = 100;
 
       for (let i = 0; i < numberOfStars; i++) {
         const star = document.createElement('div');
         star.className = 'star';
 
-        // Set random position for the star
         const posX = Math.random() * window.innerWidth;
         const posY = Math.random() * window.innerHeight;
         const delay = Math.random() * 6;
@@ -27,6 +28,20 @@
         document.body.appendChild(star);
       }
     }
+
+    function firstClick() {
+      if (clicked) {
+        document.body.style.backgroundColor = "#EEF0F2";
+        stopStars();
+        clicked = false;
+      }
+    }
+
+    function stopStars() {
+      window.onload = null;
+    }
+
+    document.body.addEventListener('click', firstClick);
     window.onload = createStars;
   </script>
 
