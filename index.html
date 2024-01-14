@@ -9,7 +9,6 @@
 <body>
 
   <script>
-    let clicked = true;
 
     function createStars() {
       const numberOfStars = 100;
@@ -29,23 +28,16 @@
       }
     }
 
-    function firstClick() {
-      if (clicked) {
-        document.body.style.backgroundColor = "#EEF0F2";
-        stopStars();
-        clicked = false;
-      }
-    }
-
     function stopStars() {
-      const stars = document.getElementsByClassName('star');
-      while (stars.length > 0) {
-        stars[0].parentNode.removeChild(stars[0]);
+      const stars = document.querySelectorAll('.star');
+      for (let i = 0; i < stars.length; i++) {
+        stars[i].style.animation = 'none';
       }
+      document.documentElement.classList.add('fade-out');
     }
 
-    document.body.addEventListener('click', firstClick);
     window.onload = createStars;
+    document.body.addEventListener('click', stopStars);
   </script>
 
   <div>
