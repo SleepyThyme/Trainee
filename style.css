@@ -46,7 +46,7 @@ html {
   position: absolute;
   width: 1px;
   height: 1px;
-  background-color: #fff;
+  background-color: #0091ff;
   animation: twinkling 2s infinite;
 }
 
