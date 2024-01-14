@@ -1,18 +1,19 @@
-.navTitle {
-  color:rgb(60, 90, 155);
-  background-color:#EEF0F2;
-}
-
 body {
   background-color: #000000;
 }
 
-.star {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background-color: #fff;
-  animation: twinkling 2s infinite;
+body.fade-out {
+  animation: fadeHtmlBackground 1s forwards;
+}
+
+footer {
+  background-color: #000000;
+  padding: 10px;
+  display: flex;
+}
+
+footer.fade-in {
+  animation: fadeFooter 1s forwards;
 }
 
 @keyframes twinkling {
@@ -32,17 +33,42 @@ body {
     background-color: #000000;
   }
   to {
-    background-color: #ffffff;
+    background-color: #D9A78B;
   }
 }
 
-html.fade-out {
-  animation: fadeHtmlBackground 2s forwards;
+@keyframes fadeFooter {
+  from {
+    background-color: #000000;
+  }
+  to {
+    background-color: #6575A6;
+  }
 }
 
-html {
-  background-color: #000000;
-  transition: background-color 0.5s ease;
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  animation: twinkling 2s infinite;
+}
+
+.navBar {
+  z-index: 1;
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+  border-style: solid;
+  border-color: #6575A6;
+  border-width: 3px;
+  border-top: none;
+  background-color: #6575A6;
+}
+
+.navTitle {
+  color:rgb(60, 90, 155);
+  background-color:#b8b8b8;
 }
 
 .a {
