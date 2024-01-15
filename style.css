@@ -79,9 +79,19 @@ footer.opacity {
   display: flex;
   flex-direction: column;
   background: url("files/cubes.png");
+  height: fit-content;
+  text-align: center;
   width: 100%;
   background-attachment: fixed;
   border-radius:25px;
+}
+
+#home {
+  opacity: 0;
+}
+
+#home.opacity {
+  animation: opacityChange 1s forwards;
 }
 
 .a {
