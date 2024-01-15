@@ -120,8 +120,8 @@ footer.opacity {
   border-style: solid;
   border-width: 3px;
   border-color: #d9c28b;
-  position: absolute;
-  bottom: -15vh;
+  position: fixed;
+  bottom: 0vh;
   left: -20vh;
   transition: left 0.5s ease-out;
   display:flex;
