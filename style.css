@@ -1,19 +1,21 @@
 body {
   background-color: #000000;
+  transition: background-color 0.5s ease-in-out;
 }
 
 body.fade-out {
-  animation: fadeHtmlBackground 1s forwards;
+  animation: fadeBackground 1s forwards;
 }
 
 footer {
-  background-color: #000000;
+  opacity: 0;
+  background-color: #6575A6;
   padding: 10px;
   display: flex;
 }
 
-footer.fade-in {
-  animation: fadeFooter 1s forwards;
+footer.opacity {
+  animation: opacityChange 1s forwards;
 }
 
 @keyframes twinkling {
@@ -28,21 +30,21 @@ footer.fade-in {
   }
 }
 
-@keyframes fadeHtmlBackground {
+@keyframes fadeBackground {
   from {
     background-color: #000000;
   }
   to {
-    background-color: #D9A78B;
+    background-color: #e6d28a;
   }
 }
 
-@keyframes fadeFooter {
+@keyframes opacityChange {
   from {
-    background-color: #000000;
+    opacity: 0;
   }
   to {
-    background-color: #6575A6;
+    opacity: 1;
   }
 }
 
@@ -55,22 +57,36 @@ footer.fade-in {
 }
 
 .navBar {
+  opacity: 0;
   display: flex;
-  justify-content: space-between;
-  align-items:center;
+  justify-content: space-around;
+  align-items: center;
   position: sticky;
   top: 0px;
   padding: 20px;
   background-color: #6575A6;
 }
 
+.navBar.opacity {
+  animation: opacityChange 1s forwards;
+}
+
 .navTitle {
   color:#6BD9F2;
 }
 
+.box {
+  display: flex;
+  flex-direction: column;
+  background: url("files/cubes.png");
+  width: 100%;
+  background-attachment: fixed;
+  border-radius:25px;
+}
+
 .a {
   font-size: 50px;
-  color:#D9A78B;
+  color:#d9c28b;
 }
 
 .b {

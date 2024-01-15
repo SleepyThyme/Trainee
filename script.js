@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   createStars();
-  setTimeout(function () {
-  }, 5000);
+  document.addEventListener('click', stopStars);
 });
 
 function createStars() {
@@ -26,7 +25,7 @@ function stopStars() {
   const stars = document.querySelectorAll('.star');
   stars.forEach(star => star.remove());
   document.body.classList.add('fade-out');
-  document.querySelector('footer').classList.add('fade-in');
+  document.getElementById('home').classList.add('opacity');
+  document.getElementById('navId').classList.add('opacity');
+  document.querySelector('footer').classList.add('opacity');
 }
-
-document.addEventListener('click', stopStars);
