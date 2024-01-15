@@ -81,10 +81,9 @@ footer.opacity {
   background: url("files/cubes.png");
   height: fit-content;
   text-align: center;
-  width: 100%;
   background-attachment: fixed;
   border-radius:25px;
-  margin: auto;
+  margin: 30%;
 }
 
 #home {
