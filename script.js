@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
   createStars();
   document.addEventListener('click', stopStars);
+  let hidden = true;
+  const clock = document.getElementById('clock')
+  clock.addEventListener('click', function() {
+    if (hidden) {
+      clock.classList.toggle('hidden');
+      hidden = false;
+    } else {
+      clock.classList.toggle('hidden');
+      hidden = true;
+    }
+  });
 });
 
 function createStars() {
@@ -27,5 +38,7 @@ function stopStars() {
   document.body.classList.add('fade-out');
   document.getElementById('home').classList.add('opacity');
   document.getElementById('navId').classList.add('opacity');
+  document.getElementById('clock').classList.add('opacity');
   document.querySelector('footer').classList.add('opacity');
 }
+
