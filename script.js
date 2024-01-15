@@ -36,7 +36,7 @@ function stopStars() {
   const stars = document.querySelectorAll('.star');
   stars.forEach(star => star.remove());
   document.body.classList.add('fade-out');
-  document.getElementById('home').classList.add('opacity');
+  document.getElementById('containersId').classList.add('opacity');
   document.getElementById('navId').classList.add('opacity');
   document.getElementById('clock').classList.add('opacity');
   document.querySelector('footer').classList.add('opacity');
