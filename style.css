@@ -315,15 +315,15 @@ p {
   border-right: 5px solid #d9c28b;
   border-top: 40px solid #d9c28b;
   border-bottom: 40px solid #d9c28b;
-  position: relative;
-  left: -12vw;
-  bottom: -5vh;
+  position: absolute;
+  left: 60px;
+  bottom: 25px;
   transition: transform 0.5s ease-in-out;
-  transform: translate(8vh, -8vh) rotate(45deg);
+  transform: translate(60px, -60px) rotate(45deg);
 }
 
 .rectangle.morning {
-  transform: translate(8vh, -2vh) rotate(135deg);
+  transform: translate(60px, -12.5px) rotate(135deg);
 }
 
 /*/////////////////////////////////////////////*/
