@@ -118,7 +118,7 @@ footer.opacity {
   0% {
     background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
   }
-  40% {
+  30% {
     background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
     opacity: 1;
   }
@@ -126,7 +126,7 @@ footer.opacity {
     background: white;
     opacity: 0.1;
   }
-  60% {
+  70% {
     background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
     opacity: 1;
   }
@@ -139,7 +139,7 @@ footer.opacity {
   0% {
     background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
   }
-  40% {
+  30% {
     background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
     opacity: 1;
   }
@@ -147,7 +147,7 @@ footer.opacity {
     background: white;
     opacity: 0.1;
   }
-  60% {
+  70% {
     background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
     opacity: 1;
   }
