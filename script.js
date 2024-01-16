@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   createStars();
   let hidden = true;
   let night = true;
-  const magic = document.getElementById('magicId');
   const clock = document.getElementById('clock');
-  const arrow = document.getElementById('hand');
+  const arrow = document.getElementById('head');
+  const rectangle = document.getElementById('hand');
   const rock = document.getElementById('rockId');
 
   clock.addEventListener('click', function (event) {
@@ -17,24 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (night) {
       switchMorning();
       arrow.classList.toggle('morning');
+      rectangle.classList.toggle('morning');
       night = false;
 
       setTimeout(() => {
         clock.classList.toggle('hidden');
         rock.classList.toggle('hidden');
-        magic.classList.toggle('hidden');
+        timeToggle();
         hidden = true;
       }, 500);
 
     } else if (!night) {
       switchNight();
       arrow.classList.toggle('morning');
+      rectangle.classList.toggle('morning');
       night = true;
 
       setTimeout(() => {
         clock.classList.toggle('hidden');
         rock.classList.toggle('hidden');
-        magic.classList.toggle('hidden');
+        timeToggle();
         hidden = true;
       }, 500);
     }
@@ -74,10 +76,7 @@ function createStars() {
 
 function backgroundTransition() {
   document.body.classList.add('fade-background');
-  document.getElementById('rocketId').classList.add('opacity');
-  document.getElementById('containersId').classList.add('opacity');
-  document.getElementById('navId').classList.add('opacity');
-  document.getElementById('clock').classList.add('opacity');
+  showElements();
   document.querySelector('footer').classList.add('opacity');
 }
 
@@ -94,3 +93,18 @@ function switchNight() {
   document.body.classList.remove('morning');
 }
 
+function showElements() {
+  var elements = document.getElementsByClassName('elements');
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    element.classList.add('opacity');
+  }
+}
+
+function timeToggle() {
+  var elements = document.getElementsByClassName('time');
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    element.classList.toggle('hidden');
+  }
+}

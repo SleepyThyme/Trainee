@@ -72,6 +72,24 @@ body.night {
   }
 }
 
+.elements.opacity {
+  animation: opacityChange 1s forwards;
+}
+
+@keyframes opacityChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.time.hidden {
+  opacity: 1;
+}
+
+
 /*/////////////////////////////////////////////*/
 /*////////////////NAVIGATION BAR///////////////*/
 /*/////////////////////////////////////////////*/
@@ -85,19 +103,7 @@ body.night {
   position: sticky;
   top: 0px;
   padding: 15px;
-}
-
-.navBar.opacity {
-  animation: opacityChange 1s forwards;
-}
-
-@keyframes opacityChange {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  background: transparent;
 }
 
 .navTitle {
@@ -126,7 +132,7 @@ body.night {
 }
 
 .rocket:hover {
-  animation: shaking 4s infinite;
+  animation: shaking 3s infinite;
 }
 
 .rocket.opacity {
@@ -137,15 +143,20 @@ body.night {
 /*////////////////BODY CONTENT/////////////////*/
 /*/////////////////////////////////////////////*/
 
-#containersId {
+.home {
   opacity: 0;
+  background: url("files/nightCube.png");
+  height: fit-content;
+  text-align: center;
+  background-attachment: fixed;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #6575A6;
+  border-width: 1px;
+  margin: 10vh 25vw;
 }
 
-#containersId.opacity {
-  animation: opacityChange 1s forwards;
-}
-
-.magicTitle {
+.homeTitle {
   opacity: 0;
   font-size: 6vh;
   color: #361e13;
@@ -157,13 +168,11 @@ body.night {
   text-shadow: 2px 2px;
 }
 
-.magicTitle.hidden {
-  opacity: 1;
-}
-
-.magicText {
+.homeText {
   opacity: 1;
   font-size: 5vh;
+  line-height: 10vh;
+  padding: 10px;
   color: #361e13;
   background-size: auto;
   background-clip: border-box;
@@ -171,18 +180,6 @@ body.night {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #646AD7, #6387F2, #4BA4F2, #6BD9F2);
   text-shadow: 2px 2px;
-}
-
-.riddle {
-  background: url("files/nightCube.png");
-  height: fit-content;
-  text-align: center;
-  background-attachment: fixed;
-  border-radius: 25px;
-  border-style: solid;
-  border-color: #6575A6;
-  border-width: 1px;
-  margin: 10vh 25vw;
 }
 
 .rock {
@@ -212,14 +209,26 @@ body.night {
 }
 
 .about {
-  background-color: white;
+  opacity: 0;
+  line-height: 5vh;
   height: fit-content;
   text-align: center;
-  background-attachment: fixed;
-  border-radius: 25px;
-  border-style: solid;
-  border-color: #6575A6;
-  border-width: 1px;
+}
+
+.aboutTitle {
+  opacity: 0;
+  background-image: linear-gradient(to right, #646AD7, #6387F2, #4BA4F2, #6BD9F2);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.aboutText {
+  opacity: 0;
+  background-image: linear-gradient(to right, #646AD7, #6387F2, #4BA4F2, #6BD9F2);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 p {
@@ -299,6 +308,22 @@ p {
 
 .arrow.morning {
   transform: translate(8vh, 8vh) rotate(135deg);
+}
+
+.rectangle {
+  border-left: 5px solid #d9c28b;
+  border-right: 5px solid #d9c28b;
+  border-top: 40px solid #d9c28b;
+  border-bottom: 40px solid #d9c28b;
+  position: relative;
+  left: -12vw;
+  bottom: -5vh;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(8vh, -8vh) rotate(45deg);
+}
+
+.rectangle.morning {
+  transform: translate(8vh, -2vh) rotate(135deg);
 }
 
 /*/////////////////////////////////////////////*/
