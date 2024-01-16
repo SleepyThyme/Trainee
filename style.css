@@ -1,6 +1,8 @@
 body {
   background-color: #000000;
+  background-attachment: fixed;
   transition: background-color 0.5s ease-in-out;
+  overflow: auto;
 }
 
 body.fade-background {
@@ -116,12 +118,17 @@ body.night {
 .rocket {
   opacity: 0;
   rotate: 45deg;
-  height: 5vh;
-  left: 12.5vw;
+  height: 8vh;
+  left: 11.5vw;
   position: fixed;
+  transition: transform 0.2s ease-in-out;
 }
 
-.rocket.hidden {
+.rocket:hover {
+  animation: shaking 4s infinite;
+}
+
+.rocket.opacity {
   opacity: 1;
 }
 
@@ -184,7 +191,7 @@ body.night {
   transition: transform 0.2s ease-in-out;
   animation: shaking 4s infinite;
   rotate: 45deg;
-  bottom: -30vh;
+  bottom: -35vh;
   right: 10vw;
 }
 
@@ -283,7 +290,7 @@ p {
 .arrow {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 40px solid #db3434;
+  border-bottom: 40px solid #d9c28b;
   position: relative;
   transition: transform 0.5s ease-in-out;
   transform: translate(8vh, -8vh) rotate(45deg);
@@ -296,3 +303,7 @@ p {
 /*/////////////////////////////////////////////*/
 /*/////////////////////////////////////////////*/
 /*/////////////////////////////////////////////*/
+
+.spacer {
+  padding-bottom: 50vh;
+}

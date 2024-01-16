@@ -60,7 +60,7 @@ function createStars() {
     const delay = Math.random() * 6;
     star.style.left = `${posX}px`;
     star.style.top = `${posY}px`;
-    
+
     setTimeout(() => {
       star.style.animation = 'fadeIn 2s forwards, twinkling 2s infinite';
       document.body.appendChild(star);
@@ -70,8 +70,7 @@ function createStars() {
 
 function backgroundTransition() {
   document.body.classList.add('fade-background');
-  const rocket = document.getElementById('rocketId');
-  rocket.classList.toggle('hidden');
+  document.getElementById('rocketId').classList.add('opacity');
   document.getElementById('containersId').classList.add('opacity');
   document.getElementById('navId').classList.add('opacity');
   document.getElementById('clock').classList.add('opacity');
