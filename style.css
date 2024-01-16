@@ -155,7 +155,7 @@ footer.opacity {
 
 #containersId {
   opacity: 0;
-  margin: 25vw;
+  margin: 10vh 20vw;
 }
 
 #containersId.opacity {
@@ -216,7 +216,7 @@ p {
   border-color: #d9c28b;
   position: fixed;
   bottom: 0vh;
-  left: -255px;
+  left: -250px;
   transition: left 0.5s ease-out;
   display:flex;
   align-items:center;
