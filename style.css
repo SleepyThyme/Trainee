@@ -47,7 +47,7 @@ footer.opacity {
     background-color: #000000;
   }
   100% {
-    background: linear-gradient(to top, #120525, #050725, #050c25, #050f25)
+    background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233)
   }
 }
 
@@ -73,7 +73,7 @@ footer.opacity {
   position: sticky;
   top: 0px;
   padding: 15px;
-  background: #d9c28b;
+  background: linear-gradient(to right, #e7b729, #AA8E4A)
 }
 
 .navBar.opacity {
