@@ -15,17 +15,6 @@ body.morning {
   animation: switchMorning 1s forwards;
 }
 
-footer {
-  opacity: 0;
-  padding: 20px;
-  padding: 10px;
-  display: flex;
-}
-
-footer.opacity {
-  animation: opacityChange 1s forwards;
-}
-
 .star {
   position: absolute;
   width: 1px;
@@ -35,23 +24,11 @@ footer.opacity {
 }
 
 @keyframes twinkling {
-  0% {
+  0%, 100% {
     opacity: 0;
   }
   50% {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes delayedTwinkling {
-  0%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
   }
 }
 
@@ -74,7 +51,7 @@ footer.opacity {
 }
 
 @keyframes switchMorning {
-  0%, 30% {
+  0%, 40% {
     background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
     opacity: 1;
   }
@@ -82,21 +59,21 @@ footer.opacity {
     background: white;
     opacity: 0.1;
   }
-  70%, 100% {
+  60%, 100% {
     background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
     opacity: 1;
   }
 }
 
 @keyframes switchNight {
-  0%, 30% {
+  0%, 40% {
     background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
   }
   50% {
     background: white;
     opacity: 0.1;
   }
-  70%, 100% {
+  60%, 100% {
     background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
     opacity: 1;
   }
@@ -134,7 +111,13 @@ footer.opacity {
   transform: translateY(-0.1vh);
   color:rgb(35, 34, 34);
   background-color: #D8AE8E;
+}
 
+.rocket {
+  rotate:45deg;
+  height:5vh;
+  left: 13vw;
+  position: fixed;
 }
 
 /*/////////////////////////////////////////////*/
@@ -150,6 +133,7 @@ footer.opacity {
 }
 
 .magicTitle {
+  opacity: 0;
   font-size: 6vh;
   color: #361e13;
   background-size: auto;
@@ -158,10 +142,14 @@ footer.opacity {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #646AD7, #6387F2, #4BA4F2, #6BD9F2);
   text-shadow: 2px 2px;
-  animation: delayedTwinkling 15s infinite;
 }
 
-.magic {
+.magicTitle.hidden {
+  opacity: 1;
+}
+
+.magicText {
+  opacity: 1;
   font-size: 5vh;
   color: #361e13;
   background-size: auto;
@@ -170,7 +158,6 @@ footer.opacity {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #646AD7, #6387F2, #4BA4F2, #6BD9F2);
   text-shadow: 2px 2px;
-  animation: twinkling 15s infinite;
 }
 
 .riddle {
@@ -186,21 +173,26 @@ footer.opacity {
 }
 
 .rock {
-  width: 25vh;
+  opacity: 1;
+  height: 15vw;
   position: absolute;
   transition: transform 0.2s ease-in-out;
-  animation: shaking 8s infinite;
+  animation: shaking 4s infinite;
   rotate: 45deg;
-  right: 5vw;
-  bottom: -50vh;
+  bottom: -30vh;
+  right: 10vw;
+}
+
+.rock.hidden {
+  opacity: 0;
 }
 
 @keyframes shaking {
-  0%, 5%, 10%, 15%, 100% {
+  0%, 5%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 100% {
     transform: translateX(-2px);
     rotate: 46deg;
   }
-  2.5%, 7.5%, 12.5%{
+  2.5%, 7.5%, 12.5%, 17.5%, 22.5%, 27.5%, 32.5%, 37.5%{
     transform: translateX(1px);
     rotate: 44deg;
   }

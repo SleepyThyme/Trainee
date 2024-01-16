@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', backgroundTransition);
   let hidden = true;
   let night = true;
+  const magic = document.getElementById('magicId');
   const clock = document.getElementById('clock');
   const arrow = document.getElementById('hand');
+  const rock = document.getElementById('rockId');
 
   clock.addEventListener('click', function (event) {
     event.stopPropagation();
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
       night = false;
       setTimeout(() => {
         clock.classList.toggle('hidden');
+        rock.classList.toggle('hidden');
+        magic.classList.toggle('hidden');
         hidden = true;
       }, 500);
     } else if (!night) {
@@ -25,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
       night = true;
       setTimeout(() => {
         clock.classList.toggle('hidden');
+        rock.classList.toggle('hidden');
+        magic.classList.toggle('hidden');
         hidden = true;
       }, 500);
     }
@@ -39,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function createStars() {
-  const numberOfStars = 125;
+  const numberOfStars = 150;
   for (let i = 0; i < numberOfStars; i++) {
     const star = document.createElement('div');
     star.className = 'star';
@@ -64,12 +70,6 @@ function backgroundTransition() {
 }
 
 function switchMorning() {
-  /*
-  setTimeout(() => {
-    const stars = document.querySelectorAll('.star');
-    stars.forEach(star => star.remove());
-  }, 500);
-  */
   document.body.classList.add('morning');
   document.body.classList.remove('night');
 }
