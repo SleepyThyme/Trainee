@@ -136,8 +136,9 @@ body.night {
 }
 
 .rocket.opacity {
-  opacity: 1;
+  opacity: 1 !important;
 }
+
 
 /*/////////////////////////////////////////////*/
 /*////////////////BODY CONTENT/////////////////*/
