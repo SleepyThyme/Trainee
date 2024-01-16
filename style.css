@@ -1,3 +1,38 @@
+.rock {
+  width: 25vh;
+  position: relative;
+  bottom: -30vh;
+  transition: transform 0.2s ease-in-out;
+  animation: shaking 5s infinite;
+}
+
+@keyframes shaking {
+  0% {
+    left: 10px;
+  }
+  10% {
+    left: -10px;
+  }
+  20% {
+    left: 10px;
+  }
+  30% {
+    left: -10px;
+  }
+  40% {
+    left: 10px;
+  }
+  50% {
+    left: -10px;
+  }
+  60% {
+    left: 0px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
 body {
   background-color: #000000;
   transition: background-color 0.5s ease-in-out;
@@ -168,7 +203,6 @@ footer.opacity {
 
 #containersId {
   opacity: 0;
-  margin: 10vh 25vw;
 }
 
 #containersId.opacity {
@@ -209,6 +243,7 @@ footer.opacity {
   border-style: solid;
   border-color: #6575A6;
   border-width: 1px;
+  margin: 10vh 25vw;
 }
 
 .about {
