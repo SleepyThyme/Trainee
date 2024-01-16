@@ -64,10 +64,12 @@ function backgroundTransition() {
 }
 
 function switchMorning() {
+  /*
   setTimeout(() => {
     const stars = document.querySelectorAll('.star');
     stars.forEach(star => star.remove());
   }, 500);
+  */
   document.body.classList.add('morning');
   document.body.classList.remove('night');
 }

@@ -55,7 +55,7 @@ footer.opacity {
     background-color: #000000;
   }
   100% {
-    background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233)
+    background: linear-gradient(to bottom right, #16042f, #04062c, #050d29, #061433, #062233)
   }
 }
 
@@ -81,20 +81,20 @@ footer.opacity {
     opacity: 0.1;
   }
   60% {
-    background: linear-gradient(to top, #ffff99, #ffe15c, #f9a034, #d05214, #d05214);
+    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
     opacity: 1;
   }
   100% {
-    background: linear-gradient(to top, #ffff99, #ffe15c, #f9a034, #d05214, #d05214);
+    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
   }
 }
 
 @keyframes switchNight {
   0% {
-    background: linear-gradient(to top, #ffff99, #ffe15c, #f9a034, #d05214, #d05214);
+    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
   }
   40% {
-    background: linear-gradient(to top, #ffff99, #ffe15c, #f9a034, #d05214, #d05214);
+    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
     opacity: 1;
   }
   50% {
@@ -174,7 +174,7 @@ footer.opacity {
 }
 
 .riddle {
-  background: url("files/cubes.png");
+  background: url("files/nightCube.png");
   height: fit-content;
   text-align: center;
   background-attachment: fixed;
@@ -216,7 +216,7 @@ p {
   border-color: #d9c28b;
   position: fixed;
   bottom: 0vh;
-  left: -250px;
+  left: -242px;
   transition: left 0.5s ease-out;
   display:flex;
   align-items:center;
