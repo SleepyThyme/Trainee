@@ -1,35 +1,19 @@
 .rock {
   width: 25vh;
   position: relative;
-  bottom: -30vh;
   transition: transform 0.2s ease-in-out;
-  animation: shaking 5s infinite;
+  animation: shaking 8s infinite;
+  rotate: 45deg;
 }
 
 @keyframes shaking {
-  0% {
-    left: 10px;
+  0%, 5%, 10%, 15%, 100% {
+    left: -1px;
+    rotate: 46deg;
   }
-  10% {
-    left: -10px;
-  }
-  20% {
-    left: 10px;
-  }
-  30% {
-    left: -10px;
-  }
-  40% {
-    left: 10px;
-  }
-  50% {
-    left: -10px;
-  }
-  60% {
-    left: 0px;
-  }
-  100% {
-    left: 10px;
+  2.5%, 7.5%, 12.5%{
+    left: 1px;
+    rotate: 44deg;
   }
 }
 
