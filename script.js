@@ -10,23 +10,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   clock.addEventListener('click', function (event) {
     event.stopPropagation();
+
     if (hidden) {
       clock.classList.toggle('hidden');
       hidden = false;
+
     } else if (night) {
       switchMorning();
       arrow.classList.toggle('morning');
       night = false;
+
       setTimeout(() => {
         clock.classList.toggle('hidden');
         rock.classList.toggle('hidden');
         magic.classList.toggle('hidden');
         hidden = true;
       }, 500);
+
     } else if (!night) {
       switchNight();
       arrow.classList.toggle('morning');
       night = true;
+
       setTimeout(() => {
         clock.classList.toggle('hidden');
         rock.classList.toggle('hidden');
@@ -46,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function createStars() {
   const numberOfStars = 150;
+
   for (let i = 0; i < numberOfStars; i++) {
     const star = document.createElement('div');
     star.className = 'star';
@@ -54,6 +60,7 @@ function createStars() {
     const delay = Math.random() * 6;
     star.style.left = `${posX}px`;
     star.style.top = `${posY}px`;
+    
     setTimeout(() => {
       star.style.animation = 'fadeIn 2s forwards, twinkling 2s infinite';
       document.body.appendChild(star);

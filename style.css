@@ -7,12 +7,50 @@ body.fade-background {
   animation: fadeBackground 1s forwards;
 }
 
-body.night {
-  animation: switchNight 1s forwards;
+@keyframes fadeBackground {
+  0%, 35% {
+    background-color: #000000;
+  }
+  100% {
+    background: linear-gradient(to bottom right, #16042f, #04062c, #050d29, #061433, #062233)
+  }
 }
 
 body.morning {
   animation: switchMorning 1s forwards;
+}
+
+@keyframes switchMorning {
+  0%, 40% {
+    background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
+    opacity: 1;
+  }
+  50% {
+    background: white;
+    opacity: 0.1;
+  }
+  60%, 100% {
+    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
+    opacity: 1;
+  }
+}
+
+body.night {
+  animation: switchNight 1s forwards;
+}
+
+@keyframes switchNight {
+  0%, 40% {
+    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
+  }
+  50% {
+    background: white;
+    opacity: 0.1;
+  }
+  60%, 100% {
+    background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
+    opacity: 1;
+  }
 }
 
 .star {
@@ -32,55 +70,8 @@ body.morning {
   }
 }
 
-@keyframes fadeBackground {
-  0%, 35% {
-    background-color: #000000;
-  }
-  100% {
-    background: linear-gradient(to bottom right, #16042f, #04062c, #050d29, #061433, #062233)
-  }
-}
-
-@keyframes opacityChange {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes switchMorning {
-  0%, 40% {
-    background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
-    opacity: 1;
-  }
-  50% {
-    background: white;
-    opacity: 0.1;
-  }
-  60%, 100% {
-    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
-    opacity: 1;
-  }
-}
-
-@keyframes switchNight {
-  0%, 40% {
-    background: linear-gradient(to top, #e18957, #b24342, #47354b, #151945, #09071a);
-  }
-  50% {
-    background: white;
-    opacity: 0.1;
-  }
-  60%, 100% {
-    background: linear-gradient(to bottom right, #1b0738, #070a36, #050d29, #061433, #062233);
-    opacity: 1;
-  }
-}
-
 /*/////////////////////////////////////////////*/
-/*/////////////////////////////////////////////*/
+/*////////////////NAVIGATION BAR///////////////*/
 /*/////////////////////////////////////////////*/
 
 .navBar {
@@ -96,6 +87,15 @@ body.morning {
 
 .navBar.opacity {
   animation: opacityChange 1s forwards;
+}
+
+@keyframes opacityChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .navTitle {
@@ -126,7 +126,7 @@ body.morning {
 }
 
 /*/////////////////////////////////////////////*/
-/*/////////////////////////////////////////////*/
+/*////////////////BODY CONTENT/////////////////*/
 /*/////////////////////////////////////////////*/
 
 #containersId {
@@ -220,7 +220,7 @@ p {
 }
 
 /*/////////////////////////////////////////////*/
-/*/////////////////////////////////////////////*/
+/*////////////////////CLOCK////////////////////*/
 /*/////////////////////////////////////////////*/
 
 .circle {
