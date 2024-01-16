@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
   createStars();
-  document.addEventListener('click', backgroundTransition);
   let hidden = true;
   let night = true;
   const magic = document.getElementById('magicId');
@@ -42,6 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function () {
+    let firstClick = true;
+    if (firstClick) {
+      backgroundTransition();
+      firstClick = false;
+    }
     if (!hidden) {
       clock.classList.toggle('hidden');
       hidden = true;
