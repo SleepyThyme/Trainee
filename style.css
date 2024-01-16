@@ -6,15 +6,11 @@ body {
 body.fade-out {
   animation: fadeBackground 1s forwards;
 }
-/* background: linear-gradient(to right, #646AD7, #6387F2, #4BA4F2, #6BD9F2); */
+
 footer {
   opacity: 0;
   padding: 20px;
-  border-style: solid;
-  background-color: rgb(105, 75, 30);
-  border-color: rgb(105, 75, 30);
-  border-width: 5px;
-  border-radius: 50px;
+  background-color: #d9c28b;
   padding: 10px;
   display: flex;
 }
@@ -44,11 +40,14 @@ footer.opacity {
 }
 
 @keyframes fadeBackground {
-  from {
+  0% {
     background-color: #000000;
   }
-  to {
-    background-color: #EEF0F2;
+  35% {
+    background-color: #000000;
+  }
+  100% {
+    background: linear-gradient(to top, #120525, #050725, #050c25, #050f25)
   }
 }
 
@@ -61,6 +60,10 @@ footer.opacity {
   }
 }
 
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
+
 .navBar {
   z-index: 1;
   opacity: 0;
@@ -70,11 +73,7 @@ footer.opacity {
   position: sticky;
   top: 0px;
   padding: 15px;
-  background: rgb(105, 75, 30);
-  border-style: solid;
-  border-color: rgb(105, 75, 30);
-  border-width: 5px;
-  border-radius: 50px;
+  background: #d9c28b;
 }
 
 .navBar.opacity {
@@ -82,13 +81,17 @@ footer.opacity {
 }
 
 .navTitle {
-  color:#d9c28b;
+  color:#D8AE8E;
   border-style: solid;
   border-radius: 10px;
   background-color: rgb(35, 34, 34);
-  border-color: #d9c28b;
+  border-color: #D8AE8E;
   padding: 10px;
 }
+
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
 
 .containers {
   display: flex;
@@ -105,38 +108,54 @@ footer.opacity {
   animation: opacityChange 1s forwards;
 }
 
-.top {
+.magic {
+  font-size: 3vh;
+  color: #361e13;
+  background-size: auto;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #646AD7, #6387F2, #4BA4F2, #6BD9F2);
+  text-shadow: 2px 2px;
+}
+
+.riddle {
   background: url("files/cubes.png");
   height: fit-content;
   text-align: center;
   background-attachment: fixed;
   border-radius: 25px;
   border-style: solid;
-  border-color: rgb(105, 75, 30);
-  border-width: 10px;
-  border-radius: 0% 0% 50% 50%;
+  border-color: #6575A6;
+  border-width: 1px;
 }
 
-.bottom {
-  background: url("files/cubes.png");
+.about {
+  background-color: white;
   height: fit-content;
   text-align: center;
   background-attachment: fixed;
   border-radius: 25px;
   border-style: solid;
-  border-color: rgb(105, 75, 30);
-  border-width: 10px;
-  border-radius: 50% 50% 0% 0%;
+  border-color: #6575A6;
+  border-width: 1px;
 }
 
+p {
+  font-size: 3vh;
+  color: #361e13;
+}
 
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
 
 .circle {
   z-index: 1;
   opacity: 0;
   width: 40vh;
   height: 40vh;
-  background: linear-gradient(to right, #353643, #5f6183);
+  background: linear-gradient(260deg, #333333, #2C3539, #424242, #555555);
   border-radius: 50%;
   border-style: solid;
   border-width: 3px;
@@ -168,6 +187,10 @@ footer.opacity {
   border-color: #d9c28b;
   transition: left 0.5s ease-out;
 }
+
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
+/*/////////////////////////////////////////////*/
 
 .a {
   font-size: 50px;

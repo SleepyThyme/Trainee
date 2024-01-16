@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   createStars();
-  document.addEventListener('click', stopStars);
+  document.addEventListener('click', backgroundTransition);
   let hidden = true;
   const clock = document.getElementById('clock')
   clock.addEventListener('click', function() {
@@ -32,13 +32,16 @@ function createStars() {
   }
 }
 
-function stopStars() {
-  const stars = document.querySelectorAll('.star');
-  stars.forEach(star => star.remove());
+function backgroundTransition() {
   document.body.classList.add('fade-out');
   document.getElementById('containersId').classList.add('opacity');
   document.getElementById('navId').classList.add('opacity');
   document.getElementById('clock').classList.add('opacity');
   document.querySelector('footer').classList.add('opacity');
+}
+
+function stopStars() {
+  const stars = document.querySelectorAll('.star');
+  stars.forEach(star => star.remove());
 }
 
