@@ -63,6 +63,8 @@ function createStars() {
 
 function backgroundTransition() {
   document.body.classList.add('fade-background');
+  const rocket = document.getElementById('rocketId');
+  rocket.classList.toggle('rocket.hidden');
   document.getElementById('containersId').classList.add('opacity');
   document.getElementById('navId').classList.add('opacity');
   document.getElementById('clock').classList.add('opacity');

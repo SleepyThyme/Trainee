@@ -114,10 +114,15 @@ body.morning {
 }
 
 .rocket {
-  rotate:45deg;
-  height:5vh;
-  left: 13vw;
+  opacity: 0;
+  rotate: 45deg;
+  height: 5vh;
+  left: 12.5vw;
   position: fixed;
+}
+
+.rocket.hidden {
+  opacity: 1;
 }
 
 /*/////////////////////////////////////////////*/
