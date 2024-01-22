@@ -97,12 +97,17 @@ body.night {
   opacity: 1;
 }
 
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+}
+
 p {
   font-size: 3vh;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
   line-height: 0;
-  padding-bottom: 0.001vh;
+  padding-bottom: 0.01vh;
 }
 
 
@@ -177,7 +182,7 @@ p {
 .homeTitle {
   opacity: 0;
   font-size: 6vh;
-  color: #653722;
+  color: #422112;
   background-size: auto;
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -191,7 +196,7 @@ p {
   font-size: 5vh;
   line-height: 10vh;
   padding: 10px;
-  color: #653722;
+  color: #422112;
   background-image: linear-gradient(to right, #4BA4F2 0%, #4BA4F2 50%, #6BD9F2 75%, #ffffff 100%);
   background-size: 200% auto;
   background-clip: border-box;
@@ -254,13 +259,10 @@ p {
 }
 
 .aboutTitle {
-  color: white;
-  opacity: 1;
   font-size: 6vh;
 }
 
 .aboutText {
-  opacity: 1;
   line-height: 6vh;
   font-size: 3vh;
 }
