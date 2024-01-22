@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let hidden = true;
   let night = true;
   const clock = document.getElementById('clock');
-  const arrow = document.getElementById('head');
-  const rectangle = document.getElementById('hand');
+  const arrowHead = document.getElementById('head');
+  const arrowBody = document.getElementById('hand');
   const rock = document.getElementById('rockId');
 
   clock.addEventListener('click', function (event) {
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     } else if (night) {
       switchMorning();
-      arrow.classList.toggle('morning');
-      rectangle.classList.toggle('morning');
+      arrowHead.classList.toggle('morning');
+      arrowBody.classList.toggle('morning');
       night = false;
 
       setTimeout(() => {
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     } else if (!night) {
       switchNight();
-      arrow.classList.toggle('morning');
-      rectangle.classList.toggle('morning');
+      arrowHead.classList.toggle('morning');
+      arrowBody.classList.toggle('morning');
       night = true;
 
       setTimeout(() => {
@@ -77,7 +77,6 @@ function createStars() {
 function backgroundTransition() {
   document.body.classList.add('fade-background');
   showElements();
-  document.querySelector('footer').classList.add('opacity');
 }
 
 function switchMorning() {
@@ -88,9 +87,9 @@ function switchMorning() {
 function switchNight() {
   setTimeout(() => {
     createStars();
+    document.body.classList.add('night');
+    document.body.classList.remove('morning');
   }, 500);
-  document.body.classList.add('night');
-  document.body.classList.remove('morning');
 }
 
 function showElements() {

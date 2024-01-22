@@ -11,8 +11,8 @@
 
 <body>
   <div class="navBar elements">
-    <a class="navTitle">Home</a>
-    <a class="navTitle">About Me</a>
+    <a class="navTitle" href="#homeId" data-hover="Home">Home</a>
+    <a class="navTitle" href="#aboutId" data-hover="About Me">About Me</a>
     <a class="navTitle">Hobbies</a>
     <a class="navTitle">Timeline</a>
   </div>
@@ -30,17 +30,18 @@
   </div>
 
   <div class="about elements" id="aboutId">
-    <h1 class="aboutTitle time">About Me</h1>
-    <p class="aboutText time">
+    <h1 class="aboutTitle">About Me</h1>
+    <img src="files/snowman.jpeg" id="snowman"></img>
+    <div class="border">
+    <p class="aboutText">
       Name: Jian Wang<br>
       Age: 19<br>
-      Degree: Actuarial Studies/Computer Science
+      Degree: Actuarial Studies/Computer Science<br>
+      Fun fact: I have voluntary nystagmus
+      <p class="time"> Puzzle Events Director</p>
     </p>
-
   </div>
-
-
-
+  </div>
 
   <div class="circle elements" id="clock">
     <div class="innerCircle" id="innerClock">
@@ -51,8 +52,8 @@
       <p class="timeStamp">IV</p>
       <p class="timeStamp">V</p>
       <p class="timeStamp">VI</p>
-      <div class="arrow" id="head"></div>
-      <div class="rectangle" id="hand"></div>
+      <div class="arrowHead" id="head"></div>
+      <div class="arrowBody" id="hand"></div>
     </div>
   </div>
 
