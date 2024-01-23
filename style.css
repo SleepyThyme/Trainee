@@ -155,6 +155,7 @@ p {
 
 .rocket:hover {
   animation: shaking 3s infinite;
+  rotate: 135deg;
 }
 
 .rocket.opacity {
@@ -186,6 +187,7 @@ p {
   opacity: 0;
   font-size: 6vh;
   text-shadow: 2px 2px;
+  padding: 3vh 0vw 0vh 0vw;
 }
 
 .homeText {
@@ -209,6 +211,7 @@ p {
 }
 
 .rock {
+  z-index: 0.5;
   opacity: 1;
   height: 15vw;
   position: absolute;
@@ -234,13 +237,6 @@ p {
   }
 }
 
-.about {
-  margin-top: 75vh;;
-  opacity: 0;
-  line-height: 5vh;
-  text-align: center;
-}
-
 #snowman {
   height: 20vh;
 }
@@ -254,11 +250,34 @@ p {
   text-align: left;
 }
 
+.about {
+  margin-top: 75vh;;
+  opacity: 0;
+  line-height: 5vh;
+  text-align: center;
+}
+
 .aboutTitle {
   font-size: 6vh;
 }
 
 .aboutText {
+  line-height: 6vh;
+  font-size: 3vh;
+}
+
+.hobbies {
+  margin-top: 75vh;;
+  opacity: 0;
+  line-height: 5vh;
+  text-align: center;
+}
+
+.hobbyTitle {
+  font-size: 6vh;
+}
+
+.hobbyText {
   line-height: 6vh;
   font-size: 3vh;
 }
