@@ -107,14 +107,14 @@ h1 {
 }
 
 p {
-  font-size: 3vh;
+  font-size: 3vw;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
   line-height: 6vh;
 }
 
 span {
-  font-size: 3vh;
+  font-size: 3vw;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
   line-height: 6vh;
@@ -175,7 +175,7 @@ span {
   -webkit-text-fill-color: #130e42;
   -webkit-background-clip: text;
   opacity: 1;
-  font-size: 6vh;
+  font-size: 6vw;
   text-shadow: 2px 2px;
   margin: 0vh 0vw 0vh 0vw;
   padding: 5vh 0vw 0vh 0vw;
@@ -183,7 +183,7 @@ span {
 
 .homeText {
   opacity: 0;
-  font-size: 5vh;
+  font-size: 5vw;
   line-height: 10vh;
   padding: 0vh 2vw 2vh 2vw;
   background-image: linear-gradient(to right, #4097e2 0%, #469ae3 50%, #60c5dc 75%, #000000 100%);
@@ -253,11 +253,11 @@ span {
 }
 
 .aboutTitle {
-  font-size: 6vh;
+  font-size: 6vw;
 }
 
 .aboutText {
-  font-size: 3vh;
+  font-size: 3vw;
 }
 
 .hobbies {
@@ -288,11 +288,11 @@ span {
 }
 
 .hobbyTitle {
-  font-size: 6vh;
+  font-size: 6vw;
 }
 
 .hobbyText {
-  font-size: 3vh;
+  font-size: 3vw;
   display:flex;
   flex-direction: column;
   align-items: left;
