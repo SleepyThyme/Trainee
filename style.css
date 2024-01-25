@@ -103,7 +103,7 @@ h1 {
   color: white;
   text-align: center;
   padding: 2vh 0vw 0vh 3vw;
-  margin: 2vh 0vw 0vh 0vw;
+  margin: 2vh 3vw 0vh 0vw;
 }
 
 p {
@@ -177,7 +177,8 @@ span {
   opacity: 0;
   font-size: 6vh;
   text-shadow: 2px 2px;
-  padding: 3vh 0vw 0vh 0vw;
+  margin: 0vh 1vw 0vh 0vw;
+  padding: 5vh 0vw 0vh 0vw;
 }
 
 .homeText {
@@ -295,10 +296,6 @@ span {
   display:flex;
   flex-direction: column;
   align-items: left;
-}
-
-.top {
-  margin: 0vh 2vw 0vh 0vw;
 }
 
 .left {
