@@ -3,6 +3,7 @@
 /*/////////////////////////////////////////////*/
 
 body {
+  scroll-behavior: smooth;
   background-color: #000000;
   background-attachment: fixed;
   overflow: auto;
@@ -100,14 +101,23 @@ body.night {
 h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
+  text-align: center;
+  padding: 2vh 0vw 0vh 3vw;
+  margin: 2vh 0vw 0vh 0vw;
 }
 
 p {
   font-size: 3vh;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
-  line-height: 3vh;
-  padding-bottom: 0.01vh;
+  line-height: 6vh;
+}
+
+span {
+  font-size: 3vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+  line-height: 6vh;
 }
 
 
@@ -116,7 +126,7 @@ p {
 /*/////////////////////////////////////////////*/
 
 .navBar {
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   display: flex;
   justify-content: space-around;
@@ -142,26 +152,6 @@ p {
   color:rgb(35, 34, 34);
   background-color: #D8AE8E;
 }
-
-.rocket {
-  z-index: 1;
-  opacity: 0;
-  rotate: 45deg;
-  height: 8vh;
-  left: 11.5vw;
-  position: fixed;
-  transition: transform 0.2s ease-in-out;
-}
-
-.rocket:hover {
-  animation: shaking 3s infinite;
-  rotate: 135deg;
-}
-
-.rocket.opacity {
-  opacity: 1 !important;
-}
-
 
 /*/////////////////////////////////////////////*/
 /*////////////////BODY CONTENT/////////////////*/
@@ -211,7 +201,7 @@ p {
 }
 
 .rock {
-  z-index: 0.5;
+  z-index: 1;
   opacity: 1;
   height: 15vw;
   position: absolute;
@@ -238,16 +228,20 @@ p {
 }
 
 #snowman {
+  margin: 3vh 0vw 0vh 0vw;
   height: 20vh;
 }
 
 .border {
+  flex-wrap: wrap;
   border-style: solid;
   border-width: 1px;
-  margin: 2vw 30vw 5vw 30vw;
-  padding: 1vh 0vw 0vh 4vw;
+  margin: 2vh 30vw 3vh 30vw;
+  padding: 0vh 2vw 0vh 2vw;
   border-color: white;
-  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .about {
@@ -262,15 +256,34 @@ p {
 }
 
 .aboutText {
-  line-height: 6vh;
   font-size: 3vh;
 }
 
 .hobbies {
-  margin-top: 75vh;;
+  margin-top: 70vh;
   opacity: 0;
   line-height: 5vh;
   text-align: center;
+}
+
+#satellite {
+  margin: 3vh 0vw 0vh 0vw;
+  height: 20vh;
+}
+
+#satellite:hover {
+  animation: hovering 3s infinite;
+}
+
+@keyframes hovering {
+  0%, 25%, 50%, 75%, 100% {
+    transform: translateY(-3px);
+    rotate: 3deg;
+  }
+  12.5%, 37.5%, 62.5%, 75%, 87.5% {
+    transform: translateY(3px);
+    rotate: -3deg;
+  }
 }
 
 .hobbyTitle {
@@ -278,8 +291,27 @@ p {
 }
 
 .hobbyText {
-  line-height: 6vh;
   font-size: 3vh;
+  display:flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.top {
+  margin: 0vh 2vw 0vh 0vw;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+  
+.hobbyPic {
+  transform:translateY(5vh);
+  height: 25vh;
 }
 
 /*/////////////////////////////////////////////*/
@@ -287,7 +319,7 @@ p {
 /*/////////////////////////////////////////////*/
 
 .circle {
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   width: 40vh;
   height: 40vh;
@@ -303,6 +335,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  rotate: 1deg;
 }
 
 .circle.opacity {
@@ -376,6 +409,19 @@ p {
 /*/////////////////////////////////////////////*/
 /*/////////////////////////////////////////////*/
 /*/////////////////////////////////////////////*/
+
+.planet {
+  z-index: 1;
+  height: 50vh;
+  width: 100vw;
+  border-radius: 30% 30% 0% 0%;
+  border-style: solid;
+  background-color: black;
+  color:black;
+  position: relative;
+  bottom:-60vh;
+}
+
 
 .spacer {
   padding-bottom: 50vh;

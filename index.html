@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <!--NAVIGATION BAR-->
   <div class="navBar elements">
     <a class="navTitle" href="#homeId" data-hover="Home">Home</a>
     <a class="navTitle" href="#aboutId" data-hover="About Me">About Me</a>
@@ -17,19 +18,21 @@
     <a class="navTitle">Timeline</a>
   </div>
 
-  <img src="files/rocket.png" class="rocket elements"></img>
   <img src="files/asteroid.png" class="rock time" id="rockId"></img>
 
-  <div class="home elements" id="homeId">
+  <!--HOME SECTION-->
+  <span id="homeId"></span>
+  <div class="home elements">
     <h1 class="homeTitle time">Time Loop</h1>
-    <p class ="homeText" id="aboutId">
+    <p class ="homeText">
       A vast sky, where moments dance,<br>
       Pushed aside, a clock in trance.<br>
       One touch may sway its prime,<br>
       A duality, begins to chime.</p>
   </div>
 
-  <div class="about elements">
+  <!--ABOUT SECTION-->
+  <div class="about elements" id="aboutId">
     <h1 class="aboutTitle">About Me</h1>
     <img src="files/snowman.jpeg" id="snowman"></img>
     <div class="border">
@@ -37,21 +40,45 @@
         Name: Jian Wang<br>
         Age: 19<br>
         Degree: Actuarial Studies/Computer Science<br>
-        Fun fact: I have voluntary nystagmus
-        <p class="time"> Society & Occupation: PuzzleSoc Writing Director!</p>
-      </p>  
+        Fun fact: I have voluntary nystagmus<br>
+        <span class="time"> Society Occupation: PuzzleSoc Writing Director!</span>
+      </p>
     </div>
   </div>
 
+  <!--HOBBIES AND INTERESTS SECTION-->
   <div class="hobbies elements" id="hobbyId">
     <h1 class="hobbyTitle">Hobbies & Interests</h1>
-    <img src="files/satellite.png" id="snowman"></img>
+    <img src="files/satellite.png" id="satellite"></img>
+
     <div class="border">
-      <p class="hobbyText">
-        Light gaming<br>
-        Listening to music <br>
-        Ice Skating
-        <p class="time"> Society & Occupation: PuzzleSoc Writing Director!</p>
+      <h1 class="top">Hobbies & Interests</h1>
+      <div class="left">
+        <p class="hobbyText">
+          🎮 Light gaming<br>
+          🎧 Listening to music<br>
+          🛏️ Sleeping<br>
+          🎲 Board Games <br>
+        </p>
+      </div>
+
+      <div class="right">
+        <p class="hobbyText">
+          Social Dynamics 🎭<br>
+          Rhythm and harmony 🎶<br>
+          Origami 📤<br>
+          Drawing 🎨
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--FINAL SECTION-->
+  <div class="about elements" id="aboutId">
+    <h1 class="aboutTitle">Timeline</h1>
+    <div class="border">
+      <p class="aboutText">
+       
       </p>
     </div>
   </div>
@@ -73,6 +100,8 @@
   <div>
     
   </div>
+
+  <div class="planet"></div>
 
   <div class="spacer"></div>
 
