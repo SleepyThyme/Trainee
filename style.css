@@ -120,6 +120,14 @@ span {
   line-height: 6vh;
 }
 
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
 
 /*/////////////////////////////////////////////*/
 /*////////////////NAVIGATION BAR///////////////*/
@@ -157,6 +165,7 @@ span {
 /*////////////////BODY CONTENT/////////////////*/
 /*/////////////////////////////////////////////*/
 
+/*/////// Home ///////*/
 .home {
   opacity: 0;
   background: url("files/nightCube.png");
@@ -228,6 +237,15 @@ span {
   }
 }
 
+/*/////// About ///////*/
+
+.about {
+  margin-top: 75vh;;
+  opacity: 0;
+  line-height: 5vh;
+  text-align: center;
+}
+
 #snowman {
   margin: 3vh 0vw 0vh 0vw;
   height: 20vh;
@@ -245,13 +263,6 @@ span {
   flex-direction: row;
 }
 
-.about {
-  margin-top: 75vh;;
-  opacity: 0;
-  line-height: 5vh;
-  text-align: center;
-}
-
 .aboutTitle {
   font-size: 3vw;
 }
@@ -259,6 +270,8 @@ span {
 .aboutText {
   font-size: 1.5vw;
 }
+
+/*/////// Hobbies ///////*/
 
 .hobbies {
   margin-top: 70vh;
@@ -296,14 +309,6 @@ span {
   display:flex;
   flex-direction: column;
   align-items: left;
-}
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
 }
   
 .hobbyPic {
