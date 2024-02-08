@@ -281,7 +281,7 @@ span {
 }
 
 #satellite {
-  margin: 3vh 0vw 0vh 0vw;
+  margin: 5vh 0vw 2vh 0vw;
   height: 20vh;
 }
 
@@ -315,6 +315,47 @@ span {
   transform:translateY(5vh);
   height: 25vh;
 }
+
+.astronaut {
+  z-index: 1;
+  height: 40vh;
+  opacity: 1;
+  position: absolute;
+  bottom: -355vh;
+  animation: floating 5s infinite;
+  transition: transform 0.2s ease-in-out;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0vh);
+  }
+  50% {
+    transform: translateY(5vh);
+  }
+}
+
+.astronaut.hidden {
+  opacity: 0;
+}
+
+.astronaut:hover {
+  animation: hovering 3s infinite;
+}
+
+.fun {
+  margin-top: 70vh;
+  opacity: 0;
+  line-height: 5vh;
+  text-align: center;
+}
+
+.quote {
+  margin: 0vh 0vw 0vh 20vw;
+}
+
+
+
 
 /*/////////////////////////////////////////////*/
 /*////////////////////CLOCK////////////////////*/
