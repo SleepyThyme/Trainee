@@ -144,7 +144,7 @@ span {
   justify-content: space-around;
   align-items: center;
   position: sticky;
-  top: 0px;
+  top: 0vh;
   padding: 15px;
   background: #0c0923;
 }
@@ -169,6 +169,31 @@ span {
 /*////////////////BODY CONTENT/////////////////*/
 /*/////////////////////////////////////////////*/
 
+#beginning {
+  z-index: 2;
+  position: relative;
+  top: 30vh;
+  opacity: 1;
+  align-self: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+#beginning:hover {
+  transition: transform 0.2 ease-in-out;
+  transform: scale(2);
+  background-image: linear-gradient(to right, #4097e2 0%, #469ae3 50%, #60c5dc 75%, #000000 100%);
+  background-size: 40% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2.5s linear infinite;
+  text-shadow: 2px 2px;
+}
+
+#beginning.hidden {
+  opacity: 0;
+}
+
 /*/////// Home ///////*/
 .home {
   opacity: 0;
@@ -180,7 +205,7 @@ span {
   border-style: solid;
   border-color: #9da3b5;
   border-width: 1px;
-  margin: 8vh 25vw;
+  margin: -5vh 25vw;
 }
 
 .homeTitle {
@@ -220,7 +245,7 @@ span {
   height: 15vw;
   position: absolute;
   transition: transform 0.2s ease-in-out;
-  animation: shaking 4s infinite;
+  animation: shaking 3s infinite;
   rotate: 45deg;
   bottom: -35vh;
   right: 10vw;
@@ -278,7 +303,7 @@ span {
 /*/////// Hobbies ///////*/
 
 .hobbies {
-  margin-top: 70vh;
+  margin-top: 80vh;
   opacity: 0;
   line-height: 5vh;
   text-align: center;
@@ -290,6 +315,7 @@ span {
 }
 
 #satellite:hover {
+  transition: transform 0.2 ease-in-out;
   animation: hovering 3s infinite;
 }
 
@@ -325,7 +351,7 @@ span {
   height: 40vh;
   opacity: 1;
   position: absolute;
-  bottom: -335vh;
+  bottom: -330vh;
   animation: floating 5s infinite;
   transition: transform 0.2s ease-in-out;
 }
@@ -344,6 +370,7 @@ span {
 }
 
 .astronaut:hover {
+  transition: transform 0.2 ease-in-out;
   animation: hovering 3s infinite;
 }
 
@@ -352,7 +379,7 @@ span {
   height: 35vh;
   opacity: 0;
   position: absolute;
-  bottom: -335vh;
+  bottom: -480vh;
   left: 10vw;
   animation: floating 5s infinite;
   transition: transform 0.2s ease-in-out;
@@ -363,6 +390,7 @@ span {
 }
 
 .balloon:hover {
+  transition: transform 0.2 ease-in-out;
   animation: hovering 3s infinite;
 }
 
@@ -402,7 +430,7 @@ span {
 }
 
 .fun {
-  margin-top: 70vh;
+  margin-top: 80vh;
   opacity: 0;
   line-height: 5vh;
   text-align: center;

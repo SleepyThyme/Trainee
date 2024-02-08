@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (firstClick) {
       backgroundTransition();
       firstClick = false;
+      const text = document.getElementById('beginning');
+      text.style.opacity = '0';
     }
     if (!hidden) {
       clock.classList.toggle('hidden');
